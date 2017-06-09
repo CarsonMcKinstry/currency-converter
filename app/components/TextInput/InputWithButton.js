@@ -1,5 +1,12 @@
 import React, { PropTypes } from 'react';
-import { View, Text, TouchableHighlight, TextInput } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  TextInput,
+  Keyboard,
+} from 'react-native';
 
 import color from 'color';
 
@@ -19,17 +26,19 @@ const InputWithButton = (props) => {
   }
 
   return (
-    <View style={containerStyles}>
-      <TouchableHighlight
-        style={styles.buttonContainer}
-        onPress={onPress}
-        underlayColor={underlayColor}
-      >
-        <Text style={styles.buttonText}>{buttonText}</Text>
-      </TouchableHighlight>
-      <View style={styles.border} />
-      <TextInput style={styles.input} underlineColorAndorid="transparent" {...props} />
-    </View>
+    <TouchableWithoutFeedback>
+      <View style={containerStyles}>
+        <TouchableHighlight
+          style={styles.buttonContainer}
+          onPress={onPress}
+          underlayColor={underlayColor}
+        >
+          <Text style={styles.buttonText}>{buttonText}</Text>
+        </TouchableHighlight>
+        <View style={styles.border} />
+        <TextInput style={styles.input} underlineColorAndorid="transparent" {...props} />
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 

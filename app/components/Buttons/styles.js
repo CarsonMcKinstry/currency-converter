@@ -1,7 +1,7 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 export default EStyleSheet.create({
-  contianer: {
+  container: {
     alignItems: 'center',
   },
   wrapper: {
