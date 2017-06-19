@@ -20,14 +20,13 @@ EStyleSheet.build({
   $darkText: '#343434',
 });
 
-const App = ({ dispatch, nav }) => (
+const App = ({ dispatch, nav }) =>
   <Navigator
     navigation={addNavigationHelpers({
       dispatch,
       state: nav,
     })}
-  />
-  );
+  />;
 
 const mapStateToProps = state => ({
   nav: state.nav,
